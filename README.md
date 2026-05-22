@@ -1,5 +1,7 @@
 ## Hi there 👋
-
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=180&section=header&text=Mark%20Sui&fontSize=48&fontColor=ffffff&animation=fadeIn&desc=Computer%20Architecture%20%7C%20SoC%20Performance%20%7C%20VLSI%20%7C%20EDA&descSize=18&descAlignY=65" />
+</p>
 <!--
 **marksui/marksui** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

@@ -19,14 +19,6 @@
   <img src="assets/terminal-intro.svg" alt="Animated terminal intro for Mark Sui profile modules" width="100%" />
 </p>
 
-<p align="center">
-  <img src="assets/formula-strip.svg" alt="Animated formula strip with logic, math, timing, complexity, and ML formulas" width="100%" />
-</p>
-
-<p align="center">
-  <img src="assets/section-divider.svg" alt="" width="100%" />
-</p>
-
 ### ✨ Featured Projects
 
 <p>

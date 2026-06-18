@@ -1,123 +1,153 @@
-<svg width="1000" height="260" viewBox="0 0 1000 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Mark Sui profile banner</title>
+<svg width="1000" height="280" viewBox="0 0 1000 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mark Sui animated profile banner</title>
   <desc id="desc">Animated circuit-themed banner for RTL, VLSI, EDA tools, embedded systems, and applied ML.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#111827"/>
-      <stop offset="0.46" stop-color="#12343B"/>
-      <stop offset="1" stop-color="#2A1F45"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08111F"/>
+      <stop offset="0.42" stop-color="#12343B"/>
+      <stop offset="0.72" stop-color="#243B53"/>
+      <stop offset="1" stop-color="#3B2F1E"/>
     </linearGradient>
-    <linearGradient id="trace" x1="120" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="trace" x1="80" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#22D3EE"/>
-      <stop offset="0.5" stop-color="#A7F3D0"/>
-      <stop offset="1" stop-color="#FBBF24"/>
+      <stop offset="0.44" stop-color="#A7F3D0"/>
+      <stop offset="0.72" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#FB7185"/>
     </linearGradient>
-    <linearGradient id="text" x1="250" y1="76" x2="744" y2="76" gradientUnits="userSpaceOnUse">
+    <linearGradient id="headline" x1="278" y1="70" x2="722" y2="70" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#E0F2FE"/>
-      <stop offset="0.5" stop-color="#F8FAFC"/>
+      <stop offset="0.52" stop-color="#FFFFFF"/>
       <stop offset="1" stop-color="#FEF3C7"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow" x="-20%" y="-30%" width="140%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" stroke="#FFFFFF" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
     <style>
       .trace {
-        stroke-dasharray: 18 18;
-        animation: trace-flow 3.8s linear infinite;
+        stroke-dasharray: 20 20;
+        animation: trace-flow 3.6s linear infinite;
       }
-      .fast {
-        animation-duration: 2.8s;
+      .trace.fast {
+        animation-duration: 2.55s;
       }
       .node {
+        animation: node-pulse 2.5s ease-in-out infinite;
         transform-box: fill-box;
         transform-origin: center;
-        animation: node-pulse 2.4s ease-in-out infinite;
       }
-      .node:nth-of-type(2n) {
-        animation-delay: .45s;
+      .node:nth-of-type(2n) { animation-delay: .35s; }
+      .node:nth-of-type(3n) { animation-delay: .8s; }
+      .node:nth-of-type(4n) { animation-delay: 1.2s; }
+      .sweep {
+        animation: sweep 5.8s ease-in-out infinite;
       }
-      .node:nth-of-type(3n) {
-        animation-delay: .9s;
+      .wave {
+        stroke-dasharray: 16 18;
+        animation: wave 3.2s linear infinite;
       }
+      .chip {
+        animation: chip-rise 4.8s ease-in-out infinite;
+      }
+      .chip:nth-of-type(2) { animation-delay: .35s; }
+      .chip:nth-of-type(3) { animation-delay: .7s; }
+      .chip:nth-of-type(4) { animation-delay: 1.05s; }
       .cursor {
         animation: blink 1s steps(2, start) infinite;
       }
-      .sweep {
-        animation: sweep 5.4s ease-in-out infinite;
-      }
       @keyframes trace-flow {
-        to { stroke-dashoffset: -72; }
+        to { stroke-dashoffset: -80; }
       }
       @keyframes node-pulse {
-        0%, 100% { opacity: .65; transform: scale(1); }
+        0%, 100% { opacity: .62; transform: scale(1); }
         50% { opacity: 1; transform: scale(1.28); }
       }
-      @keyframes blink {
-        0%, 45% { opacity: 1; }
-        46%, 100% { opacity: 0; }
-      }
       @keyframes sweep {
-        0%, 100% { transform: translateX(-180px); opacity: 0; }
-        20%, 65% { opacity: .32; }
+        0%, 100% { transform: translateX(-190px); opacity: 0; }
+        18%, 66% { opacity: .22; }
         82% { transform: translateX(1040px); opacity: 0; }
       }
+      @keyframes wave {
+        to { stroke-dashoffset: -68; }
+      }
+      @keyframes chip-rise {
+        0%, 100% { transform: translateY(0); opacity: .92; }
+        50% { transform: translateY(-4px); opacity: 1; }
+      }
+      @keyframes blink {
+        0%, 46% { opacity: 1; }
+        47%, 100% { opacity: 0; }
+      }
       @media (prefers-reduced-motion: reduce) {
-        .trace, .node, .cursor, .sweep { animation: none; }
+        .trace, .node, .sweep, .wave, .chip, .cursor { animation: none; }
       }
     </style>
   </defs>
 
-  <rect width="1000" height="260" rx="28" fill="url(#bg)"/>
-  <path class="sweep" d="M0 0H120L40 260H-80L0 0Z" fill="#FFFFFF"/>
+  <rect width="1000" height="280" rx="30" fill="url(#bg)"/>
+  <rect width="1000" height="280" rx="30" fill="url(#grid)"/>
+  <path class="sweep" d="M-40 0H112L34 280H-118L-40 0Z" fill="#FFFFFF"/>
 
-  <g opacity=".16" stroke="#FFFFFF">
-    <path d="M0 48H205M795 48H1000"/>
-    <path d="M0 216H265M735 216H1000"/>
-    <path d="M84 0V78H188V126"/>
-    <path d="M916 0V78H812V126"/>
-    <path d="M118 260V182H230V134"/>
-    <path d="M882 260V182H770V134"/>
+  <g opacity=".2" stroke="#E2E8F0" stroke-width="1.4">
+    <path d="M0 58H176M824 58H1000"/>
+    <path d="M0 222H248M752 222H1000"/>
+    <path d="M110 0V74H196V118"/>
+    <path d="M890 0V74H804V118"/>
+    <path d="M148 280V206H236V164"/>
+    <path d="M852 280V206H764V164"/>
   </g>
 
   <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
-    <path class="trace" d="M74 130H174L218 86H315"/>
-    <path class="trace fast" d="M74 168H194L248 202H390"/>
-    <path class="trace" d="M926 130H826L782 86H685"/>
-    <path class="trace fast" d="M926 168H806L752 202H610"/>
-    <path class="trace" d="M292 130H708"/>
+    <path class="trace" d="M70 132H165L215 88H326"/>
+    <path class="trace fast" d="M70 174H198L250 212H392"/>
+    <path class="trace" d="M930 132H835L785 88H674"/>
+    <path class="trace fast" d="M930 174H802L750 212H608"/>
+    <path class="trace" d="M288 140H712"/>
   </g>
 
   <g fill="#F8FAFC" filter="url(#glow)">
-    <circle class="node" cx="174" cy="130" r="6"/>
-    <circle class="node" cx="218" cy="86" r="6"/>
-    <circle class="node" cx="315" cy="86" r="6"/>
-    <circle class="node" cx="248" cy="202" r="6"/>
-    <circle class="node" cx="390" cy="202" r="6"/>
-    <circle class="node" cx="826" cy="130" r="6"/>
-    <circle class="node" cx="782" cy="86" r="6"/>
-    <circle class="node" cx="685" cy="86" r="6"/>
-    <circle class="node" cx="752" cy="202" r="6"/>
-    <circle class="node" cx="610" cy="202" r="6"/>
+    <circle class="node" cx="165" cy="132" r="6"/>
+    <circle class="node" cx="215" cy="88" r="6"/>
+    <circle class="node" cx="326" cy="88" r="6"/>
+    <circle class="node" cx="250" cy="212" r="6"/>
+    <circle class="node" cx="392" cy="212" r="6"/>
+    <circle class="node" cx="835" cy="132" r="6"/>
+    <circle class="node" cx="785" cy="88" r="6"/>
+    <circle class="node" cx="674" cy="88" r="6"/>
+    <circle class="node" cx="750" cy="212" r="6"/>
+    <circle class="node" cx="608" cy="212" r="6"/>
   </g>
 
   <g text-anchor="middle">
-    <text x="500" y="116" fill="url(#text)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="800" letter-spacing="0">Mark Sui</text>
-    <text x="500" y="154" fill="#BAE6FD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0">RTL • VLSI • EDA Tools • Embedded Systems • Applied ML</text>
-    <rect class="cursor" x="741" y="96" width="4" height="28" rx="2" fill="#FBBF24"/>
+    <text x="500" y="113" fill="url(#headline)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="50" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <rect class="cursor" x="737" y="82" width="4" height="30" rx="2" fill="#FBBF24"/>
+    <text x="500" y="153" fill="#BAE6FD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="650" letter-spacing="0">Hardware-minded software for RTL, VLSI, EDA, embedded systems, and ML</text>
   </g>
 
-  <g opacity=".9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">
-    <rect x="326" y="178" width="82" height="30" rx="15" fill="#0F766E"/>
-    <text x="367" y="198" text-anchor="middle" fill="#ECFEFF">Verilog</text>
-    <rect x="420" y="178" width="100" height="30" rx="15" fill="#1D4ED8"/>
-    <text x="470" y="198" text-anchor="middle" fill="#EFF6FF">TypeScript</text>
-    <rect x="532" y="178" width="78" height="30" rx="15" fill="#7C3AED"/>
-    <text x="571" y="198" text-anchor="middle" fill="#F5F3FF">Python</text>
-    <rect x="622" y="178" width="56" height="30" rx="15" fill="#B45309"/>
-    <text x="650" y="198" text-anchor="middle" fill="#FFFBEB">CUDA</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="750">
+    <g class="chip">
+      <rect x="318" y="181" width="70" height="31" rx="15.5" fill="#0F766E"/>
+      <text x="353" y="201" text-anchor="middle" fill="#ECFEFF">RTL</text>
+    </g>
+    <g class="chip">
+      <rect x="402" y="181" width="72" height="31" rx="15.5" fill="#1D4ED8"/>
+      <text x="438" y="201" text-anchor="middle" fill="#EFF6FF">VLSI</text>
+    </g>
+    <g class="chip">
+      <rect x="488" y="181" width="74" height="31" rx="15.5" fill="#7C3AED"/>
+      <text x="525" y="201" text-anchor="middle" fill="#F5F3FF">EDA</text>
+    </g>
+    <g class="chip">
+      <rect x="576" y="181" width="106" height="31" rx="15.5" fill="#B45309"/>
+      <text x="629" y="201" text-anchor="middle" fill="#FFFBEB">Applied ML</text>
+    </g>
   </g>
+
+  <path class="wave" d="M270 238H310V226H346V238H384V250H422V238H462V226H502V238H540V250H578V238H620V226H660V238H704" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 </svg>

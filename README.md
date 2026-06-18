@@ -2,21 +2,81 @@
   <img src="assets/profile-banner.svg" alt="Animated circuit-themed banner for Mark Sui" width="100%" />
 </p>
 
-## Hi, I'm Mark 👋
+<h2 align="center">Hi, I'm Mark 👋</h2>
 
-**MS ECE @ UC San Diego** · Computer Engineering + Mathematics
+<p align="center">
+  <b>MS ECE @ UC San Diego</b> · Computer Engineering + Mathematics<br/>
+  Building hardware-minded software for <b>RTL</b>, <b>VLSI</b>, <b>EDA tools</b>, embedded systems, and applied ML.
+</p>
 
-I build hardware-minded software for **RTL**, **VLSI**, **EDA tools**, embedded systems, and applied ML.
+<p align="center">
+  🌐 <a href="https://marksui.github.io/">Portfolio</a>
+  · 📄 <a href="https://marksui.github.io/resume.html">Resume</a>
+  · 💼 <a href="https://www.linkedin.com/in/marksui6">LinkedIn</a>
+</p>
 
-🌐 [Portfolio](https://marksui.github.io/) · 📄 [Resume](https://marksui.github.io/resume.html) · 💼 [LinkedIn](https://www.linkedin.com/in/marksui6)
+<p align="center">
+  <img src="assets/section-divider.svg" alt="" width="100%" />
+</p>
 
-### Featured
+### ✨ Featured Projects
 
-- 🧩 [Logic & CMOS Studio](https://marksui.github.io/logic-cmos-studio/) ([source](https://github.com/marksui/logic-cmos-studio)) - Boolean logic, K-maps, Verilog export, and CMOS visualization.
-- 🎯 [Hardware Interview Trainer](https://marksui.github.io/Hardware_Interview_Trainer/) ([source](https://github.com/marksui/Hardware_Interview_Trainer)) - RTL, DV, STA, physical design, and EDA interview practice.
-- 🗜️ [MarkMacZip](https://marksui.github.io/MacZip/) ([source](https://github.com/marksui/MacZip)) - macOS archive utility.
-- 🥽 [CloserXR Sales Negotiator](https://github.com/marksui/CSE165-CloserXR-Sales-Negotiator) - Mixed-reality Unity role-play with speech, Gemini, and TTS.
+<table>
+  <tr>
+    <td width="50%">
+      <b>🧩 <a href="https://marksui.github.io/logic-cmos-studio/">Logic &amp; CMOS Studio</a></b><br/>
+      Boolean logic, K-maps, Verilog export, and CMOS visualization.<br/>
+      <sub><a href="https://github.com/marksui/logic-cmos-studio">source</a> · TypeScript / React / EDA</sub>
+    </td>
+    <td width="50%">
+      <b>🎯 <a href="https://marksui.github.io/Hardware_Interview_Trainer/">Hardware Interview Trainer</a></b><br/>
+      RTL, DV, STA, physical design, and EDA interview practice.<br/>
+      <sub><a href="https://github.com/marksui/Hardware_Interview_Trainer">source</a> · local-first prep app</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <b>🗜️ <a href="https://marksui.github.io/MacZip/">MarkMacZip</a></b><br/>
+      A clean macOS archive utility with a release-oriented product page.<br/>
+      <sub><a href="https://github.com/marksui/MacZip">source</a> · Swift / macOS</sub>
+    </td>
+    <td width="50%">
+      <b>🥽 <a href="https://github.com/marksui/CSE165-CloserXR-Sales-Negotiator">CloserXR Sales Negotiator</a></b><br/>
+      Mixed-reality Unity role-play with speech, Gemini dialogue, TTS, and avatar states.<br/>
+      <sub>Unity / C# / XR / AI dialogue</sub>
+    </td>
+  </tr>
+</table>
 
-### Stack
+<p align="center">
+  <img src="assets/section-divider.svg" alt="" width="100%" />
+</p>
 
-`SystemVerilog` `Verilog` `C/C++` `Python` `TypeScript` `React` `MATLAB` `CUDA` `Unity/C#`
+### ⚡ I Like Building
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <b>🔬 Hardware Tools</b><br/>
+      <sub>RTL, CMOS, timing, architecture, and EDA workflows</sub>
+    </td>
+    <td align="center" width="33%">
+      <b>🛠️ Systems Software</b><br/>
+      <sub>local-first utilities, embedded sensing, and clean interfaces</sub>
+    </td>
+    <td align="center" width="33%">
+      <b>📚 Learning Products</b><br/>
+      <sub>interactive study tools that make dense topics inspectable</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="assets/section-divider.svg" alt="" width="100%" />
+</p>
+
+### 🧰 Stack
+
+<p align="center">
+  <code>SystemVerilog</code> · <code>Verilog</code> · <code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>React</code> · <code>MATLAB</code> · <code>CUDA</code> · <code>Unity/C#</code>
+</p>

@@ -1,26 +1,43 @@
-<svg width="1000" height="280" viewBox="0 0 1000 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Mark Sui animated profile banner</title>
-  <desc id="desc">Animated circuit-themed banner for RTL, VLSI, EDA tools, embedded systems, and applied ML.</desc>
+  <desc id="desc">Neon circuit banner with animated traces, scanlines, signal packets, particles, and glitch text.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="280" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#08111F"/>
-      <stop offset="0.42" stop-color="#12343B"/>
-      <stop offset="0.72" stop-color="#243B53"/>
-      <stop offset="1" stop-color="#3B2F1E"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.36" stop-color="#071D2B"/>
+      <stop offset="0.68" stop-color="#172554"/>
+      <stop offset="1" stop-color="#3B1D12"/>
     </linearGradient>
-    <linearGradient id="trace" x1="80" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="trace" x1="60" y1="0" x2="940" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#22D3EE"/>
-      <stop offset="0.44" stop-color="#A7F3D0"/>
-      <stop offset="0.72" stop-color="#FBBF24"/>
+      <stop offset="0.34" stop-color="#A7F3D0"/>
+      <stop offset="0.68" stop-color="#FBBF24"/>
       <stop offset="1" stop-color="#FB7185"/>
     </linearGradient>
-    <linearGradient id="headline" x1="278" y1="70" x2="722" y2="70" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#E0F2FE"/>
-      <stop offset="0.52" stop-color="#FFFFFF"/>
+    <linearGradient id="headline" x1="275" y1="70" x2="725" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BAE6FD"/>
+      <stop offset="0.48" stop-color="#FFFFFF"/>
       <stop offset="1" stop-color="#FEF3C7"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-30%" width="140%" height="160%">
+    <radialGradient id="aura-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(295 118) rotate(28) scale(238 86)">
+      <stop stop-color="#22D3EE" stop-opacity=".5"/>
+      <stop offset=".7" stop-color="#22D3EE" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aura-gold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(710 176) rotate(-20) scale(250 88)">
+      <stop stop-color="#FBBF24" stop-opacity=".42"/>
+      <stop offset=".72" stop-color="#FBBF24" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-25%" y="-35%" width="150%" height="170%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="hot-glow" x="-40%" y="-50%" width="180%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -29,125 +46,208 @@
     <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
       <path d="M34 0H0V34" stroke="#FFFFFF" stroke-opacity=".07" stroke-width="1"/>
     </pattern>
+    <pattern id="scanlines" width="1000" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 0H1000" stroke="#E0F2FE" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
     <style>
       .trace {
-        stroke-dasharray: 20 20;
-        animation: trace-flow 3.6s linear infinite;
+        stroke-dasharray: 18 22;
+        animation: trace-flow 3.4s linear infinite;
       }
-      .trace.fast {
-        animation-duration: 2.55s;
-      }
+      .trace.fast { animation-duration: 2.35s; }
+      .trace.slow { animation-duration: 5.2s; }
       .node {
-        animation: node-pulse 2.5s ease-in-out infinite;
+        animation: node-pulse 2.45s ease-in-out infinite;
         transform-box: fill-box;
         transform-origin: center;
       }
-      .node:nth-of-type(2n) { animation-delay: .35s; }
-      .node:nth-of-type(3n) { animation-delay: .8s; }
-      .node:nth-of-type(4n) { animation-delay: 1.2s; }
-      .sweep {
-        animation: sweep 5.8s ease-in-out infinite;
-      }
+      .node:nth-of-type(2n) { animation-delay: .32s; }
+      .node:nth-of-type(3n) { animation-delay: .74s; }
+      .node:nth-of-type(4n) { animation-delay: 1.08s; }
+      .sweep { animation: sweep 5.6s ease-in-out infinite; }
+      .scan { animation: scan 5s linear infinite; }
       .wave {
-        stroke-dasharray: 16 18;
-        animation: wave 3.2s linear infinite;
+        stroke-dasharray: 14 18;
+        animation: wave 2.8s linear infinite;
       }
       .chip {
-        animation: chip-rise 4.8s ease-in-out infinite;
+        animation: chip-rise 4.6s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
       }
-      .chip:nth-of-type(2) { animation-delay: .35s; }
-      .chip:nth-of-type(3) { animation-delay: .7s; }
-      .chip:nth-of-type(4) { animation-delay: 1.05s; }
-      .cursor {
-        animation: blink 1s steps(2, start) infinite;
+      .chip:nth-of-type(2) { animation-delay: .32s; }
+      .chip:nth-of-type(3) { animation-delay: .64s; }
+      .chip:nth-of-type(4) { animation-delay: .96s; }
+      .cursor { animation: blink 1s steps(2, start) infinite; }
+      .ring-a {
+        transform-origin: 500px 148px;
+        animation: rotate-a 18s linear infinite;
       }
-      @keyframes trace-flow {
-        to { stroke-dashoffset: -80; }
+      .ring-b {
+        transform-origin: 500px 148px;
+        animation: rotate-b 24s linear infinite;
       }
+      .packet-a { animation: packet-a 3.6s ease-in-out infinite; }
+      .packet-b { animation: packet-b 4.2s ease-in-out infinite; }
+      .packet-c { animation: packet-c 3.1s ease-in-out infinite; }
+      .spark {
+        animation: sparkle 3.2s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .spark:nth-of-type(2n) { animation-delay: .45s; }
+      .spark:nth-of-type(3n) { animation-delay: .9s; }
+      .spark:nth-of-type(4n) { animation-delay: 1.35s; }
+      .glitch-cyan { animation: glitch-cyan 4.4s steps(1, end) infinite; }
+      .glitch-pink { animation: glitch-pink 4.4s steps(1, end) infinite; }
+      @keyframes trace-flow { to { stroke-dashoffset: -80; } }
       @keyframes node-pulse {
-        0%, 100% { opacity: .62; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.28); }
+        0%, 100% { opacity: .58; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.32); }
       }
       @keyframes sweep {
-        0%, 100% { transform: translateX(-190px); opacity: 0; }
-        18%, 66% { opacity: .22; }
-        82% { transform: translateX(1040px); opacity: 0; }
+        0%, 100% { transform: translateX(-200px); opacity: 0; }
+        15%, 64% { opacity: .24; }
+        84% { transform: translateX(1050px); opacity: 0; }
       }
-      @keyframes wave {
-        to { stroke-dashoffset: -68; }
-      }
+      @keyframes scan { to { transform: translateY(16px); } }
+      @keyframes wave { to { stroke-dashoffset: -64; } }
       @keyframes chip-rise {
-        0%, 100% { transform: translateY(0); opacity: .92; }
-        50% { transform: translateY(-4px); opacity: 1; }
+        0%, 100% { transform: translateY(0); opacity: .9; }
+        50% { transform: translateY(-5px); opacity: 1; }
       }
       @keyframes blink {
         0%, 46% { opacity: 1; }
         47%, 100% { opacity: 0; }
       }
+      @keyframes rotate-a { to { transform: rotate(360deg); } }
+      @keyframes rotate-b { to { transform: rotate(-360deg); } }
+      @keyframes packet-a {
+        0%, 12% { transform: translateX(0); opacity: 0; }
+        18%, 82% { opacity: 1; }
+        100% { transform: translateX(600px); opacity: 0; }
+      }
+      @keyframes packet-b {
+        0%, 18% { transform: translateX(0); opacity: 0; }
+        24%, 78% { opacity: 1; }
+        100% { transform: translateX(-600px); opacity: 0; }
+      }
+      @keyframes packet-c {
+        0%, 10% { transform: translateX(0); opacity: 0; }
+        24%, 76% { opacity: 1; }
+        100% { transform: translateX(250px); opacity: 0; }
+      }
+      @keyframes sparkle {
+        0%, 100% { opacity: .18; transform: scale(.7); }
+        50% { opacity: .9; transform: scale(1.25); }
+      }
+      @keyframes glitch-cyan {
+        0%, 92%, 100% { opacity: 0; transform: translate(0, 0); }
+        93% { opacity: .7; transform: translate(-4px, -1px); }
+        95% { opacity: .25; transform: translate(3px, 1px); }
+      }
+      @keyframes glitch-pink {
+        0%, 91%, 100% { opacity: 0; transform: translate(0, 0); }
+        92% { opacity: .55; transform: translate(4px, 1px); }
+        94% { opacity: .2; transform: translate(-3px, -1px); }
+      }
       @media (prefers-reduced-motion: reduce) {
-        .trace, .node, .sweep, .wave, .chip, .cursor { animation: none; }
+        .trace, .node, .sweep, .scan, .wave, .chip, .cursor, .ring-a, .ring-b, .packet-a, .packet-b, .packet-c, .spark, .glitch-cyan, .glitch-pink {
+          animation: none;
+        }
       }
     </style>
   </defs>
 
-  <rect width="1000" height="280" rx="30" fill="url(#bg)"/>
-  <rect width="1000" height="280" rx="30" fill="url(#grid)"/>
-  <path class="sweep" d="M-40 0H112L34 280H-118L-40 0Z" fill="#FFFFFF"/>
+  <rect width="1000" height="300" rx="30" fill="url(#bg)"/>
+  <rect width="1000" height="300" rx="30" fill="url(#grid)"/>
+  <rect class="scan" width="1000" height="300" rx="30" fill="url(#scanlines)"/>
+  <ellipse cx="290" cy="120" rx="260" ry="96" fill="url(#aura-blue)"/>
+  <ellipse cx="710" cy="178" rx="270" ry="98" fill="url(#aura-gold)"/>
+  <path class="sweep" d="M-46 0H118L34 300H-130L-46 0Z" fill="#FFFFFF"/>
 
-  <g opacity=".2" stroke="#E2E8F0" stroke-width="1.4">
-    <path d="M0 58H176M824 58H1000"/>
-    <path d="M0 222H248M752 222H1000"/>
-    <path d="M110 0V74H196V118"/>
-    <path d="M890 0V74H804V118"/>
-    <path d="M148 280V206H236V164"/>
-    <path d="M852 280V206H764V164"/>
+  <g opacity=".22" stroke="#E2E8F0" stroke-width="1.4">
+    <path d="M0 54H180M820 54H1000"/>
+    <path d="M0 236H250M750 236H1000"/>
+    <path d="M110 0V76H202V122"/>
+    <path d="M890 0V76H798V122"/>
+    <path d="M148 300V220H238V172"/>
+    <path d="M852 300V220H762V172"/>
+  </g>
+
+  <g class="ring-a" opacity=".42" stroke="url(#trace)" stroke-width="1.5" filter="url(#glow)">
+    <ellipse cx="500" cy="148" rx="242" ry="64"/>
+    <path d="M258 148H312M688 148H742"/>
+  </g>
+  <g class="ring-b" opacity=".34" stroke="#BAE6FD" stroke-width="1.2" stroke-dasharray="10 16">
+    <ellipse cx="500" cy="148" rx="292" ry="84"/>
   </g>
 
   <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
-    <path class="trace" d="M70 132H165L215 88H326"/>
-    <path class="trace fast" d="M70 174H198L250 212H392"/>
-    <path class="trace" d="M930 132H835L785 88H674"/>
-    <path class="trace fast" d="M930 174H802L750 212H608"/>
-    <path class="trace" d="M288 140H712"/>
+    <path class="trace" d="M68 136H166L218 88H332"/>
+    <path class="trace fast" d="M68 184H198L252 224H398"/>
+    <path class="trace" d="M932 136H834L782 88H668"/>
+    <path class="trace fast" d="M932 184H802L748 224H602"/>
+    <path class="trace slow" d="M286 148H714"/>
+    <path class="trace fast" d="M382 70H436L458 92H542L564 70H620"/>
+  </g>
+
+  <g filter="url(#hot-glow)">
+    <circle class="packet-a" cx="210" cy="148" r="5" fill="#67E8F9"/>
+    <circle class="packet-b" cx="790" cy="148" r="5" fill="#FBBF24"/>
+    <circle class="packet-c" cx="382" cy="70" r="4" fill="#F0FDFA"/>
   </g>
 
   <g fill="#F8FAFC" filter="url(#glow)">
-    <circle class="node" cx="165" cy="132" r="6"/>
-    <circle class="node" cx="215" cy="88" r="6"/>
-    <circle class="node" cx="326" cy="88" r="6"/>
-    <circle class="node" cx="250" cy="212" r="6"/>
-    <circle class="node" cx="392" cy="212" r="6"/>
-    <circle class="node" cx="835" cy="132" r="6"/>
-    <circle class="node" cx="785" cy="88" r="6"/>
-    <circle class="node" cx="674" cy="88" r="6"/>
-    <circle class="node" cx="750" cy="212" r="6"/>
-    <circle class="node" cx="608" cy="212" r="6"/>
+    <circle class="node" cx="166" cy="136" r="6"/>
+    <circle class="node" cx="218" cy="88" r="6"/>
+    <circle class="node" cx="332" cy="88" r="6"/>
+    <circle class="node" cx="252" cy="224" r="6"/>
+    <circle class="node" cx="398" cy="224" r="6"/>
+    <circle class="node" cx="834" cy="136" r="6"/>
+    <circle class="node" cx="782" cy="88" r="6"/>
+    <circle class="node" cx="668" cy="88" r="6"/>
+    <circle class="node" cx="748" cy="224" r="6"/>
+    <circle class="node" cx="602" cy="224" r="6"/>
   </g>
 
-  <g text-anchor="middle">
-    <text x="500" y="113" fill="url(#headline)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="50" font-weight="850" letter-spacing="0">Mark Sui</text>
-    <rect class="cursor" x="737" y="82" width="4" height="30" rx="2" fill="#FBBF24"/>
-    <text x="500" y="153" fill="#BAE6FD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="650" letter-spacing="0">Hardware-minded software for RTL, VLSI, EDA, embedded systems, and ML</text>
+  <g fill="#E0F2FE" filter="url(#glow)">
+    <circle class="spark" cx="132" cy="82" r="2.5"/>
+    <circle class="spark" cx="206" cy="244" r="2.2"/>
+    <circle class="spark" cx="306" cy="38" r="2.4"/>
+    <circle class="spark" cx="432" cy="246" r="2.5"/>
+    <circle class="spark" cx="570" cy="46" r="2.3"/>
+    <circle class="spark" cx="704" cy="250" r="2.6"/>
+    <circle class="spark" cx="812" cy="64" r="2.1"/>
+    <circle class="spark" cx="894" cy="214" r="2.4"/>
+  </g>
+
+  <g text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text class="glitch-cyan" x="500" y="118" fill="#22D3EE" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <text class="glitch-pink" x="500" y="118" fill="#FB7185" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <text x="500" y="118" fill="url(#headline)" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <rect class="cursor" x="748" y="86" width="4" height="34" rx="2" fill="#FBBF24"/>
+    <text x="500" y="159" fill="#BAE6FD" font-size="20" font-weight="650" letter-spacing="0">Hardware-minded software for RTL, VLSI, EDA, embedded systems, and ML</text>
   </g>
 
   <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="750">
     <g class="chip">
-      <rect x="318" y="181" width="70" height="31" rx="15.5" fill="#0F766E"/>
-      <text x="353" y="201" text-anchor="middle" fill="#ECFEFF">RTL</text>
+      <rect x="308" y="191" width="76" height="32" rx="16" fill="#0F766E"/>
+      <text x="346" y="212" text-anchor="middle" fill="#ECFEFF">RTL</text>
     </g>
     <g class="chip">
-      <rect x="402" y="181" width="72" height="31" rx="15.5" fill="#1D4ED8"/>
-      <text x="438" y="201" text-anchor="middle" fill="#EFF6FF">VLSI</text>
+      <rect x="398" y="191" width="78" height="32" rx="16" fill="#1D4ED8"/>
+      <text x="437" y="212" text-anchor="middle" fill="#EFF6FF">VLSI</text>
     </g>
     <g class="chip">
-      <rect x="488" y="181" width="74" height="31" rx="15.5" fill="#7C3AED"/>
-      <text x="525" y="201" text-anchor="middle" fill="#F5F3FF">EDA</text>
+      <rect x="490" y="191" width="80" height="32" rx="16" fill="#7C3AED"/>
+      <text x="530" y="212" text-anchor="middle" fill="#F5F3FF">EDA</text>
     </g>
     <g class="chip">
-      <rect x="576" y="181" width="106" height="31" rx="15.5" fill="#B45309"/>
-      <text x="629" y="201" text-anchor="middle" fill="#FFFBEB">Applied ML</text>
+      <rect x="584" y="191" width="112" height="32" rx="16" fill="#B45309"/>
+      <text x="640" y="212" text-anchor="middle" fill="#FFFBEB">Applied ML</text>
     </g>
   </g>
 
-  <path class="wave" d="M270 238H310V226H346V238H384V250H422V238H462V226H502V238H540V250H578V238H620V226H660V238H704" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path class="wave" d="M260 255H302V241H340V255H380V267H420V255H462V241H504V255H544V267H584V255H628V241H670V255H714" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 </svg>

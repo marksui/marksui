@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>MS ECE @ UC San Diego</b> · Computer Engineering + Mathematics<br/>
-  Building hardware-minded software for <b>RTL</b>, <b>VLSI</b>, <b>EDA tools</b>, embedded systems, and applied ML.
+  Building hardware-minded software for <b>RTL</b>, <b>VLSI</b>, <b>EDA tools</b>, embedded systems, applied ML, and math.
 </p>
 
 <p align="center">
@@ -78,5 +78,5 @@
 ### 🧰 Stack
 
 <p align="center">
-  <code>SystemVerilog</code> · <code>Verilog</code> · <code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>React</code> · <code>MATLAB</code> · <code>CUDA</code> · <code>Unity/C#</code>
+  <code>SystemVerilog</code> · <code>Verilog</code> · <code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>React</code> · <code>MATLAB</code> · <code>Math</code> · <code>CUDA</code> · <code>Unity/C#</code>
 </p>

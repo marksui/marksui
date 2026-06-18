@@ -1,6 +1,6 @@
 <svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Mark Sui animated profile banner</title>
-  <desc id="desc">Neon circuit banner with animated traces, scanlines, signal packets, particles, and glitch text.</desc>
+  <desc id="desc">Neon circuit banner with UC San Diego-inspired architecture, math symbols, animated traces, scanlines, signal packets, and glitch text.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#050816"/>
@@ -19,12 +19,17 @@
       <stop offset="0.48" stop-color="#FFFFFF"/>
       <stop offset="1" stop-color="#FEF3C7"/>
     </linearGradient>
-    <radialGradient id="aura-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(295 118) rotate(28) scale(238 86)">
-      <stop stop-color="#22D3EE" stop-opacity=".5"/>
+    <linearGradient id="panel" x1="215" y1="66" x2="785" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06111F" stop-opacity=".84"/>
+      <stop offset=".5" stop-color="#082033" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#1E1B2F" stop-opacity=".78"/>
+    </linearGradient>
+    <radialGradient id="aura-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(290 120) rotate(28) scale(238 86)">
+      <stop stop-color="#22D3EE" stop-opacity=".48"/>
       <stop offset=".7" stop-color="#22D3EE" stop-opacity=".08"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="aura-gold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(710 176) rotate(-20) scale(250 88)">
+    <radialGradient id="aura-gold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(730 178) rotate(-20) scale(250 88)">
       <stop stop-color="#FBBF24" stop-opacity=".42"/>
       <stop offset=".72" stop-color="#FBBF24" stop-opacity=".08"/>
       <stop offset="1" stop-color="#FBBF24" stop-opacity="0"/>
@@ -75,9 +80,10 @@
         transform-box: fill-box;
         transform-origin: center;
       }
-      .chip:nth-of-type(2) { animation-delay: .32s; }
-      .chip:nth-of-type(3) { animation-delay: .64s; }
-      .chip:nth-of-type(4) { animation-delay: .96s; }
+      .chip:nth-of-type(2) { animation-delay: .28s; }
+      .chip:nth-of-type(3) { animation-delay: .56s; }
+      .chip:nth-of-type(4) { animation-delay: .84s; }
+      .chip:nth-of-type(5) { animation-delay: 1.12s; }
       .cursor { animation: blink 1s steps(2, start) infinite; }
       .ring-a {
         transform-origin: 500px 148px;
@@ -90,14 +96,19 @@
       .packet-a { animation: packet-a 3.6s ease-in-out infinite; }
       .packet-b { animation: packet-b 4.2s ease-in-out infinite; }
       .packet-c { animation: packet-c 3.1s ease-in-out infinite; }
-      .spark {
+      .spark, .math-symbol {
         animation: sparkle 3.2s ease-in-out infinite;
         transform-box: fill-box;
         transform-origin: center;
       }
-      .spark:nth-of-type(2n) { animation-delay: .45s; }
-      .spark:nth-of-type(3n) { animation-delay: .9s; }
-      .spark:nth-of-type(4n) { animation-delay: 1.35s; }
+      .spark:nth-of-type(2n), .math-symbol:nth-of-type(2n) { animation-delay: .45s; }
+      .spark:nth-of-type(3n), .math-symbol:nth-of-type(3n) { animation-delay: .9s; }
+      .spark:nth-of-type(4n), .math-symbol:nth-of-type(4n) { animation-delay: 1.35s; }
+      .geisel {
+        animation: geisel-float 7s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
       .glitch-cyan { animation: glitch-cyan 4.4s steps(1, end) infinite; }
       .glitch-pink { animation: glitch-pink 4.4s steps(1, end) infinite; }
       @keyframes trace-flow { to { stroke-dashoffset: -80; } }
@@ -113,8 +124,8 @@
       @keyframes scan { to { transform: translateY(16px); } }
       @keyframes wave { to { stroke-dashoffset: -64; } }
       @keyframes chip-rise {
-        0%, 100% { transform: translateY(0); opacity: .9; }
-        50% { transform: translateY(-5px); opacity: 1; }
+        0%, 100% { transform: translateY(0); opacity: .92; }
+        50% { transform: translateY(-4px); opacity: 1; }
       }
       @keyframes blink {
         0%, 46% { opacity: 1; }
@@ -138,21 +149,25 @@
         100% { transform: translateX(250px); opacity: 0; }
       }
       @keyframes sparkle {
-        0%, 100% { opacity: .18; transform: scale(.7); }
-        50% { opacity: .9; transform: scale(1.25); }
+        0%, 100% { opacity: .2; transform: scale(.8); }
+        50% { opacity: .95; transform: scale(1.16); }
+      }
+      @keyframes geisel-float {
+        0%, 100% { transform: translateY(0); opacity: .42; }
+        50% { transform: translateY(-5px); opacity: .56; }
       }
       @keyframes glitch-cyan {
         0%, 92%, 100% { opacity: 0; transform: translate(0, 0); }
-        93% { opacity: .7; transform: translate(-4px, -1px); }
-        95% { opacity: .25; transform: translate(3px, 1px); }
+        93% { opacity: .68; transform: translate(-4px, -1px); }
+        95% { opacity: .22; transform: translate(3px, 1px); }
       }
       @keyframes glitch-pink {
         0%, 91%, 100% { opacity: 0; transform: translate(0, 0); }
-        92% { opacity: .55; transform: translate(4px, 1px); }
+        92% { opacity: .54; transform: translate(4px, 1px); }
         94% { opacity: .2; transform: translate(-3px, -1px); }
       }
       @media (prefers-reduced-motion: reduce) {
-        .trace, .node, .sweep, .scan, .wave, .chip, .cursor, .ring-a, .ring-b, .packet-a, .packet-b, .packet-c, .spark, .glitch-cyan, .glitch-pink {
+        .trace, .node, .sweep, .scan, .wave, .chip, .cursor, .ring-a, .ring-b, .packet-a, .packet-b, .packet-c, .spark, .math-symbol, .geisel, .glitch-cyan, .glitch-pink {
           animation: none;
         }
       }
@@ -163,7 +178,7 @@
   <rect width="1000" height="300" rx="30" fill="url(#grid)"/>
   <rect class="scan" width="1000" height="300" rx="30" fill="url(#scanlines)"/>
   <ellipse cx="290" cy="120" rx="260" ry="96" fill="url(#aura-blue)"/>
-  <ellipse cx="710" cy="178" rx="270" ry="98" fill="url(#aura-gold)"/>
+  <ellipse cx="730" cy="178" rx="270" ry="98" fill="url(#aura-gold)"/>
   <path class="sweep" d="M-46 0H118L34 300H-130L-46 0Z" fill="#FFFFFF"/>
 
   <g opacity=".22" stroke="#E2E8F0" stroke-width="1.4">
@@ -175,15 +190,26 @@
     <path d="M852 300V220H762V172"/>
   </g>
 
-  <g class="ring-a" opacity=".42" stroke="url(#trace)" stroke-width="1.5" filter="url(#glow)">
+  <g class="geisel" opacity=".48" filter="url(#glow)">
+    <path d="M98 218H270" stroke="#BAE6FD" stroke-opacity=".32" stroke-width="2"/>
+    <path d="M126 136H244L230 153H140L126 136Z" fill="#E0F2FE" fill-opacity=".16" stroke="#BAE6FD" stroke-opacity=".42"/>
+    <path d="M110 154H260L242 172H128L110 154Z" fill="#E0F2FE" fill-opacity=".13" stroke="#BAE6FD" stroke-opacity=".36"/>
+    <path d="M94 173H276L252 194H118L94 173Z" fill="#E0F2FE" fill-opacity=".11" stroke="#BAE6FD" stroke-opacity=".32"/>
+    <path d="M129 194H149L126 220H108L129 194Z" fill="#BAE6FD" fill-opacity=".24"/>
+    <path d="M218 194H238L260 220H242L218 194Z" fill="#BAE6FD" fill-opacity=".24"/>
+    <path d="M171 194H189V220H171V194Z" fill="#BAE6FD" fill-opacity=".18"/>
+    <text x="185" y="232" text-anchor="middle" fill="#BAE6FD" fill-opacity=".58" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">UC San Diego</text>
+  </g>
+
+  <g class="ring-a" opacity=".32" stroke="url(#trace)" stroke-width="1.5" filter="url(#glow)">
     <ellipse cx="500" cy="148" rx="242" ry="64"/>
     <path d="M258 148H312M688 148H742"/>
   </g>
-  <g class="ring-b" opacity=".34" stroke="#BAE6FD" stroke-width="1.2" stroke-dasharray="10 16">
+  <g class="ring-b" opacity=".26" stroke="#BAE6FD" stroke-width="1.2" stroke-dasharray="10 16">
     <ellipse cx="500" cy="148" rx="292" ry="84"/>
   </g>
 
-  <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+  <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" opacity=".72">
     <path class="trace" d="M68 136H166L218 88H332"/>
     <path class="trace fast" d="M68 184H198L252 224H398"/>
     <path class="trace" d="M932 136H834L782 88H668"/>
@@ -215,39 +241,53 @@
     <circle class="spark" cx="132" cy="82" r="2.5"/>
     <circle class="spark" cx="206" cy="244" r="2.2"/>
     <circle class="spark" cx="306" cy="38" r="2.4"/>
-    <circle class="spark" cx="432" cy="246" r="2.5"/>
+    <circle class="spark" cx="432" cy="250" r="2.5"/>
     <circle class="spark" cx="570" cy="46" r="2.3"/>
-    <circle class="spark" cx="704" cy="250" r="2.6"/>
+    <circle class="spark" cx="704" cy="252" r="2.6"/>
     <circle class="spark" cx="812" cy="64" r="2.1"/>
     <circle class="spark" cx="894" cy="214" r="2.4"/>
   </g>
 
+  <g font-family="Cambria Math, STIX Two Math, Georgia, serif" font-weight="700" filter="url(#glow)">
+    <text class="math-symbol" x="784" y="82" fill="#A7F3D0" font-size="22" opacity=".78">∑</text>
+    <text class="math-symbol" x="842" y="116" fill="#FBBF24" font-size="18" opacity=".74">f(x)</text>
+    <text class="math-symbol" x="793" y="244" fill="#BAE6FD" font-size="20" opacity=".7">∫</text>
+    <text class="math-symbol" x="878" y="230" fill="#F0FDFA" font-size="18" opacity=".58">π</text>
+  </g>
+
+  <rect x="214" y="72" width="572" height="154" rx="28" fill="url(#panel)" stroke="#BAE6FD" stroke-opacity=".18"/>
+  <path d="M250 96H350M650 96H750M248 202H348M652 202H752" stroke="#A7F3D0" stroke-opacity=".18" stroke-width="2" stroke-linecap="round"/>
+
   <g text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">
-    <text class="glitch-cyan" x="500" y="118" fill="#22D3EE" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
-    <text class="glitch-pink" x="500" y="118" fill="#FB7185" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
-    <text x="500" y="118" fill="url(#headline)" font-size="54" font-weight="850" letter-spacing="0">Mark Sui</text>
-    <rect class="cursor" x="748" y="86" width="4" height="34" rx="2" fill="#FBBF24"/>
-    <text x="500" y="159" fill="#BAE6FD" font-size="20" font-weight="650" letter-spacing="0">Hardware-minded software for RTL, VLSI, EDA, embedded systems, and ML</text>
+    <text class="glitch-cyan" x="500" y="122" fill="#22D3EE" font-size="52" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <text class="glitch-pink" x="500" y="122" fill="#FB7185" font-size="52" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <text x="500" y="122" fill="url(#headline)" font-size="52" font-weight="850" letter-spacing="0">Mark Sui</text>
+    <rect class="cursor" x="740" y="91" width="4" height="32" rx="2" fill="#FBBF24"/>
+    <text x="500" y="157" fill="#DBEAFE" font-size="18" font-weight="700" letter-spacing="0">RTL, VLSI, EDA, embedded systems, applied ML, and math</text>
   </g>
 
-  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="750">
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="750">
     <g class="chip">
-      <rect x="308" y="191" width="76" height="32" rx="16" fill="#0F766E"/>
-      <text x="346" y="212" text-anchor="middle" fill="#ECFEFF">RTL</text>
+      <rect x="260" y="182" width="72" height="32" rx="16" fill="#0F766E"/>
+      <text x="296" y="203" text-anchor="middle" fill="#ECFEFF">RTL</text>
     </g>
     <g class="chip">
-      <rect x="398" y="191" width="78" height="32" rx="16" fill="#1D4ED8"/>
-      <text x="437" y="212" text-anchor="middle" fill="#EFF6FF">VLSI</text>
+      <rect x="346" y="182" width="76" height="32" rx="16" fill="#1D4ED8"/>
+      <text x="384" y="203" text-anchor="middle" fill="#EFF6FF">VLSI</text>
     </g>
     <g class="chip">
-      <rect x="490" y="191" width="80" height="32" rx="16" fill="#7C3AED"/>
-      <text x="530" y="212" text-anchor="middle" fill="#F5F3FF">EDA</text>
+      <rect x="436" y="182" width="78" height="32" rx="16" fill="#7C3AED"/>
+      <text x="475" y="203" text-anchor="middle" fill="#F5F3FF">EDA</text>
     </g>
     <g class="chip">
-      <rect x="584" y="191" width="112" height="32" rx="16" fill="#B45309"/>
-      <text x="640" y="212" text-anchor="middle" fill="#FFFBEB">Applied ML</text>
+      <rect x="528" y="182" width="88" height="32" rx="16" fill="#0369A1"/>
+      <text x="572" y="203" text-anchor="middle" fill="#E0F2FE">Math</text>
+    </g>
+    <g class="chip">
+      <rect x="630" y="182" width="112" height="32" rx="16" fill="#B45309"/>
+      <text x="686" y="203" text-anchor="middle" fill="#FFFBEB">Applied ML</text>
     </g>
   </g>
 
-  <path class="wave" d="M260 255H302V241H340V255H380V267H420V255H462V241H504V255H544V267H584V255H628V241H670V255H714" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path class="wave" d="M260 257H302V243H340V257H380V269H420V257H462V243H504V257H544V269H584V257H628V243H670V257H714" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 </svg>

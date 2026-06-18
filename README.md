@@ -21,6 +21,10 @@
 
 ### ✨ Featured Projects
 
+<p>
+  A quick map of the projects I want people to open first: hardware/EDA learning tools, GPU work, embedded systems, product-style utilities, XR, and applied ML.
+</p>
+
 <table>
   <tr>
     <td width="50%">
@@ -36,14 +40,38 @@
   </tr>
   <tr>
     <td width="50%">
+      <b>⚡ <a href="https://marksui.github.io/files/project-reports/ece268-ggm-tree-cuda-report.pdf">GPU-Accelerated GGM Tree</a></b><br/>
+      CPU/GPU GGM tree construction with Keccak-f1600 and Spongent-128 PRF backends.<br/>
+      <sub><a href="https://github.com/marksui/ECE268-GGM-Tree-Construction">source</a> · CUDA / C / hardware security</sub>
+    </td>
+    <td width="50%">
+      <b>🌡️ <a href="https://marksui.github.io/Indoor_Monitoring/">Indoor Monitoring</a></b><br/>
+      ESP32 indoor environment monitor for CO2, comfort metrics, and live room status.<br/>
+      <sub><a href="https://github.com/marksui/Indoor_Monitoring">source</a> · C / embedded sensing</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <b>🗜️ <a href="https://marksui.github.io/MacZip/">MarkMacZip</a></b><br/>
-      A clean macOS archive utility with a release-oriented product page.<br/>
+      Native-feeling macOS archive utility with compression, extraction, and release flow.<br/>
       <sub><a href="https://github.com/marksui/MacZip">source</a> · Swift / macOS</sub>
     </td>
+    <td width="50%">
+      <b>🈶 <a href="https://marksui.github.io/nihongo-learning/">Nihongo Learning</a></b><br/>
+      Japanese learning website for Chinese speakers with a clean web-study experience.<br/>
+      <sub><a href="https://github.com/marksui/nihongo-learning">source</a> · TypeScript / learning tool</sub>
+    </td>
+  </tr>
+  <tr>
     <td width="50%">
       <b>🥽 <a href="https://github.com/marksui/CSE165-CloserXR-Sales-Negotiator">CloserXR Sales Negotiator</a></b><br/>
       Mixed-reality Unity role-play with speech, Gemini dialogue, TTS, and avatar states.<br/>
       <sub>Unity / C# / XR / AI dialogue</sub>
+    </td>
+    <td width="50%">
+      <b>🌦️ <a href="https://github.com/marksui/Kaggle-Climate-Emulation-Model-Competition">Climate Emulation Model</a></b><br/>
+      Kaggle climate-emulation modeling workflow with ML experiments and report writing.<br/>
+      <sub><a href="https://github.com/marksui/Kaggle-Climate-Emulation-Model-Competition/blob/main/FINAL_REPORT.pdf">report</a> · Jupyter / applied ML</sub>
     </td>
   </tr>
 </table>

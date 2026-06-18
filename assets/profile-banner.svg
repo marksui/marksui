@@ -19,10 +19,10 @@
       <stop offset="0.48" stop-color="#FFFFFF"/>
       <stop offset="1" stop-color="#FEF3C7"/>
     </linearGradient>
-    <linearGradient id="panel" x1="215" y1="66" x2="785" y2="228" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#06111F" stop-opacity=".84"/>
-      <stop offset=".5" stop-color="#082033" stop-opacity=".72"/>
-      <stop offset="1" stop-color="#1E1B2F" stop-opacity=".78"/>
+    <linearGradient id="panel" x1="204" y1="66" x2="796" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06111F" stop-opacity=".93"/>
+      <stop offset=".5" stop-color="#082033" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#1E1B2F" stop-opacity=".9"/>
     </linearGradient>
     <radialGradient id="aura-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(290 120) rotate(28) scale(238 86)">
       <stop stop-color="#22D3EE" stop-opacity=".48"/>
@@ -201,20 +201,20 @@
     <text x="185" y="232" text-anchor="middle" fill="#BAE6FD" fill-opacity=".58" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">UC San Diego</text>
   </g>
 
-  <g class="ring-a" opacity=".32" stroke="url(#trace)" stroke-width="1.5" filter="url(#glow)">
+  <g class="ring-a" opacity=".22" stroke="url(#trace)" stroke-width="1.5" filter="url(#glow)">
     <ellipse cx="500" cy="148" rx="242" ry="64"/>
     <path d="M258 148H312M688 148H742"/>
   </g>
-  <g class="ring-b" opacity=".26" stroke="#BAE6FD" stroke-width="1.2" stroke-dasharray="10 16">
+  <g class="ring-b" opacity=".16" stroke="#BAE6FD" stroke-width="1.2" stroke-dasharray="10 16">
     <ellipse cx="500" cy="148" rx="292" ry="84"/>
   </g>
 
-  <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" opacity=".72">
+  <g stroke="url(#trace)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" opacity=".56">
     <path class="trace" d="M68 136H166L218 88H332"/>
     <path class="trace fast" d="M68 184H198L252 224H398"/>
     <path class="trace" d="M932 136H834L782 88H668"/>
     <path class="trace fast" d="M932 184H802L748 224H602"/>
-    <path class="trace slow" d="M286 148H714"/>
+    <path class="trace slow" d="M68 148H184M816 148H932"/>
     <path class="trace fast" d="M382 70H436L458 92H542L564 70H620"/>
   </g>
 
@@ -249,13 +249,14 @@
   </g>
 
   <g font-family="Cambria Math, STIX Two Math, Georgia, serif" font-weight="700" filter="url(#glow)">
-    <text class="math-symbol" x="784" y="82" fill="#A7F3D0" font-size="22" opacity=".78">∑</text>
-    <text class="math-symbol" x="842" y="116" fill="#FBBF24" font-size="18" opacity=".74">f(x)</text>
-    <text class="math-symbol" x="793" y="244" fill="#BAE6FD" font-size="20" opacity=".7">∫</text>
-    <text class="math-symbol" x="878" y="230" fill="#F0FDFA" font-size="18" opacity=".58">π</text>
+    <text class="math-symbol" x="812" y="78" fill="#A7F3D0" font-size="22" opacity=".78">∑</text>
+    <text class="math-symbol" x="868" y="118" fill="#FBBF24" font-size="18" opacity=".74">f(x)</text>
+    <text class="math-symbol" x="796" y="258" fill="#BAE6FD" font-size="20" opacity=".7">∫</text>
+    <text class="math-symbol" x="884" y="238" fill="#F0FDFA" font-size="18" opacity=".58">π</text>
+    <text class="math-symbol" x="116" y="102" fill="#E0F2FE" font-size="18" opacity=".48">∇</text>
   </g>
 
-  <rect x="214" y="72" width="572" height="154" rx="28" fill="url(#panel)" stroke="#BAE6FD" stroke-opacity=".18"/>
+  <rect x="204" y="72" width="592" height="154" rx="28" fill="url(#panel)" stroke="#BAE6FD" stroke-opacity=".22"/>
   <path d="M250 96H350M650 96H750M248 202H348M652 202H752" stroke="#A7F3D0" stroke-opacity=".18" stroke-width="2" stroke-linecap="round"/>
 
   <g text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">

@@ -1,0 +1,73 @@
+<svg width="1000" height="140" viewBox="0 0 1000 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated mini timeline</title>
+  <desc id="desc">Timeline from math to computer engineering, RTL, VLSI, EDA tools, and machine learning systems.</desc>
+  <defs>
+    <linearGradient id="path" x1="80" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset=".32" stop-color="#A7F3D0"/>
+      <stop offset=".66" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#FB7185"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-80%" width="120%" height="260%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .timeline { stroke-dasharray: 18 18; animation: flow 3.8s linear infinite; }
+      .comet { animation: comet 5.2s ease-in-out infinite; }
+      .node { animation: pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .node:nth-of-type(2) { animation-delay: .28s; }
+      .node:nth-of-type(3) { animation-delay: .56s; }
+      .node:nth-of-type(4) { animation-delay: .84s; }
+      .node:nth-of-type(5) { animation-delay: 1.12s; }
+      .node:nth-of-type(6) { animation-delay: 1.4s; }
+      @keyframes flow { to { stroke-dashoffset: -72; } }
+      @keyframes comet {
+        0%, 8% { transform: translateX(0); opacity: 0; }
+        16%, 82% { opacity: 1; }
+        100% { transform: translateX(760px); opacity: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: .86; }
+        50% { transform: scale(1.12); opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .timeline, .comet, .node { animation: none; transform: none; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect x="44" y="16" width="912" height="108" rx="24" fill="#07111F" stroke="#38BDF8" stroke-opacity=".24"/>
+  <path class="timeline" d="M120 70H880" stroke="url(#path)" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+  <circle class="comet" cx="120" cy="70" r="7" fill="#F8FAFC" filter="url(#glow)"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g class="node">
+      <circle cx="120" cy="70" r="13" fill="#082F49" stroke="#22D3EE" stroke-width="3"/>
+      <text x="120" y="42" fill="#BAE6FD" font-size="14" font-weight="800">Math</text>
+    </g>
+    <g class="node">
+      <circle cx="272" cy="70" r="13" fill="#064E3B" stroke="#A7F3D0" stroke-width="3"/>
+      <text x="272" y="105" fill="#D1FAE5" font-size="14" font-weight="800">CE</text>
+    </g>
+    <g class="node">
+      <circle cx="424" cy="70" r="13" fill="#1D4ED8" stroke="#93C5FD" stroke-width="3"/>
+      <text x="424" y="42" fill="#DBEAFE" font-size="14" font-weight="800">RTL</text>
+    </g>
+    <g class="node">
+      <circle cx="576" cy="70" r="13" fill="#5B21B6" stroke="#C4B5FD" stroke-width="3"/>
+      <text x="576" y="105" fill="#EDE9FE" font-size="14" font-weight="800">VLSI</text>
+    </g>
+    <g class="node">
+      <circle cx="728" cy="70" r="13" fill="#92400E" stroke="#FBBF24" stroke-width="3"/>
+      <text x="728" y="42" fill="#FEF3C7" font-size="14" font-weight="800">EDA Tools</text>
+    </g>
+    <g class="node">
+      <circle cx="880" cy="70" r="13" fill="#9F1239" stroke="#FB7185" stroke-width="3"/>
+      <text x="880" y="105" fill="#FFE4E6" font-size="14" font-weight="800">ML Systems</text>
+    </g>
+  </g>
+</svg>

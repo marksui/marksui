@@ -1,0 +1,81 @@
+<svg width="1000" height="190" viewBox="0 0 1000 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated terminal intro</title>
+  <desc id="desc">Terminal-style animated intro showing profile modules for RTL, VLSI, math, machine learning, EDA, CUDA, embedded systems, and XR.</desc>
+  <defs>
+    <linearGradient id="term-bg" x1="0" y1="0" x2="1000" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset=".48" stop-color="#061926"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="term-line" x1="80" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset=".5" stop-color="#A7F3D0"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="term-glow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="term-scan" width="1000" height="7" patternUnits="userSpaceOnUse">
+      <path d="M0 0H1000" stroke="#E0F2FE" stroke-opacity=".06"/>
+    </pattern>
+    <style>
+      .line-1 { animation: line-in 7s ease-in-out infinite; }
+      .line-2 { animation: line-in 7s ease-in-out .7s infinite; }
+      .line-3 { animation: line-in 7s ease-in-out 1.4s infinite; }
+      .line-4 { animation: line-in 7s ease-in-out 2.1s infinite; }
+      .cursor { animation: blink 1s steps(2, start) infinite; }
+      .bar { stroke-dasharray: 560; stroke-dashoffset: 560; animation: load 7s ease-in-out infinite; }
+      .spark { animation: spark 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .spark:nth-of-type(2n) { animation-delay: .45s; }
+      .spark:nth-of-type(3n) { animation-delay: .9s; }
+      @keyframes line-in {
+        0%, 9% { opacity: 0; transform: translateY(5px); }
+        16%, 82% { opacity: 1; transform: translateY(0); }
+        94%, 100% { opacity: .38; }
+      }
+      @keyframes blink {
+        0%, 48% { opacity: 1; }
+        49%, 100% { opacity: 0; }
+      }
+      @keyframes load {
+        0% { stroke-dashoffset: 560; }
+        58%, 82% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 560; }
+      }
+      @keyframes spark {
+        0%, 100% { opacity: .22; transform: scale(.75); }
+        50% { opacity: .95; transform: scale(1.2); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .line-1, .line-2, .line-3, .line-4, .cursor, .bar, .spark { animation: none; opacity: 1; transform: none; stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect x="44" y="18" width="912" height="154" rx="18" fill="url(#term-bg)" stroke="#38BDF8" stroke-opacity=".32"/>
+  <rect x="44" y="18" width="912" height="154" rx="18" fill="url(#term-scan)"/>
+  <path d="M44 50H956" stroke="#94A3B8" stroke-opacity=".18"/>
+  <circle cx="72" cy="34" r="5" fill="#FB7185"/>
+  <circle cx="92" cy="34" r="5" fill="#FBBF24"/>
+  <circle cx="112" cy="34" r="5" fill="#34D399"/>
+  <text x="135" y="39" fill="#BAE6FD" fill-opacity=".82" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700">mark-sui.profile</text>
+
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="700">
+    <text class="line-1" x="78" y="78" fill="#A7F3D0">&gt; booting mark-sui.profile</text>
+    <text class="line-2" x="78" y="105" fill="#E0F2FE">&gt; loading modules: RTL / VLSI / Math / ML</text>
+    <text class="line-3" x="78" y="132" fill="#FDE68A">&gt; compiling tools: EDA + CUDA + embedded + XR</text>
+    <text class="line-4" x="78" y="159" fill="#F8FAFC">&gt; status: building useful systems</text>
+    <rect class="cursor" x="515" y="145" width="9" height="18" rx="2" fill="#22D3EE"/>
+  </g>
+
+  <path class="bar" d="M384 34H912" stroke="url(#term-line)" stroke-width="3" stroke-linecap="round" filter="url(#term-glow)"/>
+  <g fill="#E0F2FE" filter="url(#term-glow)">
+    <circle class="spark" cx="706" cy="78" r="3"/>
+    <circle class="spark" cx="824" cy="116" r="2.5"/>
+    <circle class="spark" cx="876" cy="144" r="3"/>
+  </g>
+</svg>

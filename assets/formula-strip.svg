@@ -1,0 +1,81 @@
+<svg width="1000" height="116" viewBox="0 0 1000 116" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated math and EDA formula strip</title>
+  <desc id="desc">Animated strip of math, logic, timing, complexity, and machine learning formulas.</desc>
+  <defs>
+    <linearGradient id="rail" x1="70" y1="0" x2="930" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".1"/>
+      <stop offset=".25" stop-color="#22D3EE"/>
+      <stop offset=".5" stop-color="#A7F3D0"/>
+      <stop offset=".75" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity=".2"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-80%" width="120%" height="260%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .rail { stroke-dasharray: 20 18; animation: rail-flow 3.4s linear infinite; }
+      .chip { animation: float 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .chip:nth-of-type(2) { animation-delay: .35s; }
+      .chip:nth-of-type(3) { animation-delay: .7s; }
+      .chip:nth-of-type(4) { animation-delay: 1.05s; }
+      .chip:nth-of-type(5) { animation-delay: 1.4s; }
+      .chip:nth-of-type(6) { animation-delay: 1.75s; }
+      .dot { animation: pulse 2.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .dot:nth-of-type(2n) { animation-delay: .35s; }
+      @keyframes rail-flow { to { stroke-dashoffset: -76; } }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); opacity: .94; }
+        50% { transform: translateY(-4px); opacity: 1; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: .45; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.28); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rail, .chip, .dot { animation: none; transform: none; }
+      }
+    </style>
+  </defs>
+
+  <rect x="44" y="18" width="912" height="80" rx="24" fill="#07111F" stroke="#38BDF8" stroke-opacity=".22"/>
+  <path class="rail" d="M78 58H922" stroke="url(#rail)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g font-family="Cambria Math, STIX Two Math, Georgia, serif" font-size="16" font-weight="700" text-anchor="middle">
+    <g class="chip">
+      <rect x="90" y="34" width="126" height="48" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-opacity=".38"/>
+      <text x="153" y="63" fill="#E0F2FE">F=A·B+A'·C</text>
+    </g>
+    <g class="chip">
+      <rect x="230" y="34" width="116" height="48" rx="14" fill="#0F172A" stroke="#A7F3D0" stroke-opacity=".38"/>
+      <text x="288" y="63" fill="#ECFDF5">Σ wᵢxᵢ</text>
+    </g>
+    <g class="chip">
+      <rect x="360" y="34" width="112" height="48" rx="14" fill="#0F172A" stroke="#FBBF24" stroke-opacity=".42"/>
+      <text x="416" y="63" fill="#FEF3C7">∫ f(x) dx</text>
+    </g>
+    <g class="chip">
+      <rect x="486" y="34" width="164" height="48" rx="14" fill="#0F172A" stroke="#BAE6FD" stroke-opacity=".38"/>
+      <text x="568" y="63" fill="#DBEAFE">slack=Treq−Tarr</text>
+    </g>
+    <g class="chip">
+      <rect x="664" y="34" width="120" height="48" rx="14" fill="#0F172A" stroke="#C4B5FD" stroke-opacity=".42"/>
+      <text x="724" y="63" fill="#F5F3FF">O(n log n)</text>
+    </g>
+    <g class="chip">
+      <rect x="798" y="34" width="112" height="48" rx="14" fill="#0F172A" stroke="#FB7185" stroke-opacity=".42"/>
+      <text x="854" y="63" fill="#FFE4E6">P(Y|X)</text>
+    </g>
+  </g>
+
+  <g fill="#F8FAFC" filter="url(#glow)">
+    <circle class="dot" cx="222" cy="58" r="4"/>
+    <circle class="dot" cx="352" cy="58" r="4"/>
+    <circle class="dot" cx="478" cy="58" r="4"/>
+    <circle class="dot" cx="656" cy="58" r="4"/>
+    <circle class="dot" cx="790" cy="58" r="4"/>
+  </g>
+</svg>

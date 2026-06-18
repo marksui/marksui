@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/profile-banner.svg" alt="Animated circuit-themed banner for Mark Sui" width="100%" />
+</p>
+
 ## Hi, I'm Mark 👋
 
 **MS ECE @ UC San Diego** · Computer Engineering + Mathematics

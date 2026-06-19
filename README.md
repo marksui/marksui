@@ -99,20 +99,6 @@
   </tr>
 </table>
 
-<p align="center">
-  <img src="assets/section-divider.svg" alt="" width="100%" />
-</p>
-
-### 🧭 Mini Timeline
-
-<p align="center">
-  <img src="assets/mini-timeline.svg" alt="Animated timeline from math to computer engineering, RTL, VLSI, EDA tools, and ML systems" width="100%" />
-</p>
-
-<p align="center">
-  <img src="assets/section-divider.svg" alt="" width="100%" />
-</p>
-
 ### 🧰 Stack
 
 <p align="center">

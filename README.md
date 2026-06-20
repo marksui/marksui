@@ -102,5 +102,5 @@
 ### 🧰 Stack
 
 <p align="center">
-  <code>SystemVerilog</code> · <code>Verilog</code> · <code>C/C++</code> · <code>Python</code> · <code>TypeScript</code> · <code>React</code> · <code>MATLAB</code> · <code>Math</code> · <code>CUDA</code> · <code>Unity/C#</code>
+  <img src="assets/skills-board.svg" alt="Skills board grouped by languages, hardware and EDA, data and math, tools and frameworks, and deploy platforms" width="100%" />
 </p>

@@ -1,317 +1,189 @@
-<svg width="1000" height="285" viewBox="0 0 1000 285" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Mark Sui skills board</title>
-  <desc id="desc">A dark neon skills board grouped by languages, hardware and EDA, data and math, tools and frameworks, and deploy platforms.</desc>
+<svg width="1000" height="260" viewBox="0 0 1000 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mark Sui technical stack</title>
+  <desc id="desc">A mature dark technical stack board grouped by languages, hardware and EDA, data and math, tools, and delivery.</desc>
   <defs>
-    <linearGradient id="board-bg" x1="20" y1="18" x2="980" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#070B12"/>
-      <stop offset=".5" stop-color="#0B1220"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="bg" x1="32" y1="24" x2="968" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05070D"/>
+      <stop offset=".52" stop-color="#0A1220"/>
+      <stop offset="1" stop-color="#101827"/>
     </linearGradient>
-    <linearGradient id="board-line" x1="58" y1="0" x2="942" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22D3EE"/>
-      <stop offset=".26" stop-color="#34D399"/>
-      <stop offset=".52" stop-color="#60A5FA"/>
-      <stop offset=".76" stop-color="#F472B6"/>
-      <stop offset="1" stop-color="#FB923C"/>
+    <linearGradient id="edge" x1="52" y1="0" x2="948" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".35"/>
+      <stop offset=".5" stop-color="#94A3B8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity=".28"/>
     </linearGradient>
-    <linearGradient id="signal" x1="80" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22D3EE" stop-opacity=".15"/>
-      <stop offset=".15" stop-color="#22D3EE"/>
-      <stop offset=".42" stop-color="#86EFAC"/>
-      <stop offset=".7" stop-color="#FACC15"/>
-      <stop offset=".9" stop-color="#FB7185"/>
-      <stop offset="1" stop-color="#FB7185" stop-opacity=".08"/>
+    <linearGradient id="trace" x1="78" y1="0" x2="922" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".12"/>
+      <stop offset=".24" stop-color="#22D3EE" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#A7F3D0" stop-opacity=".7"/>
+      <stop offset=".76" stop-color="#FDE68A" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity=".12"/>
     </linearGradient>
-    <filter id="soft-glow" x="-35%" y="-35%" width="170%" height="170%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="tile-glow" x="-45%" y="-45%" width="190%" height="190%">
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <pattern id="board-grid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <path d="M36 0H0V36" stroke="#E2E8F0" stroke-opacity=".045"/>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#CBD5E1" stroke-opacity=".035"/>
     </pattern>
     <pattern id="scan" width="1000" height="8" patternUnits="userSpaceOnUse">
-      <path d="M0 0H1000" stroke="#E0F2FE" stroke-opacity=".045"/>
+      <path d="M0 0H1000" stroke="#E5E7EB" stroke-opacity=".035"/>
     </pattern>
     <style>
-      .heading {
+      .label {
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
-        font-size: 28px;
-        font-weight: 900;
-        letter-spacing: 0;
-        paint-order: stroke;
-        stroke: #020617;
-        stroke-width: 4px;
-        stroke-linejoin: round;
-        animation: heading-pulse 5.2s ease-in-out infinite;
-      }
-      .h-small { font-size: 24px; }
-      .icon-text {
-        font-family: JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace;
-        font-weight: 900;
-        letter-spacing: 0;
-      }
-      .icon-label {
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
-        font-size: 8px;
+        font-size: 18px;
         font-weight: 800;
         letter-spacing: 0;
-        text-anchor: middle;
-        fill: #CBD5E1;
-        opacity: .82;
       }
-      .tile-core {
-        fill: #0F172A;
-        stroke-width: 2.5;
-        filter: url(#tile-glow);
-        animation: tile-breathe 4.8s ease-in-out infinite;
+      .meta {
+        font-family: JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0;
+        fill: #94A3B8;
       }
-      .delay-1 .tile-core { animation-delay: .25s; }
-      .delay-2 .tile-core { animation-delay: .55s; }
-      .delay-3 .tile-core { animation-delay: .85s; }
-      .delay-4 .tile-core { animation-delay: 1.15s; }
-      .delay-5 .tile-core { animation-delay: 1.45s; }
-      .divider { stroke: #334155; stroke-opacity: .32; }
-      .signal {
-        stroke-dasharray: 28 26;
-        stroke-dashoffset: 0;
-        animation: signal-flow 5s linear infinite;
+      .chip-text {
+        font-family: JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0;
+        fill: #E5E7EB;
       }
-      .packet { animation: packet 5s ease-in-out infinite; }
-      .packet.two { animation-delay: 1.6s; }
-      .packet.three { animation-delay: 3.1s; }
-      .spark { animation: spark 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-      .spark.two { animation-delay: .7s; }
-      .spark.three { animation-delay: 1.4s; }
-      @keyframes heading-pulse {
-        0%, 100% { filter: drop-shadow(0 0 0 rgba(255,255,255,0)); }
-        48% { filter: drop-shadow(0 0 8px currentColor); }
+      .panel {
+        fill: #0B1220;
+        stroke: #334155;
+        stroke-opacity: .55;
       }
-      @keyframes tile-breathe {
-        0%, 100% { opacity: .86; }
-        50% { opacity: 1; }
+      .chip {
+        fill: #111827;
+        stroke-width: 1.2;
       }
-      @keyframes signal-flow {
-        to { stroke-dashoffset: -108; }
+      .trace {
+        stroke-dasharray: 34 28;
+        animation: trace-flow 13s linear infinite;
       }
-      @keyframes packet {
-        0% { transform: translateX(-34px); opacity: 0; }
-        14%, 72% { opacity: 1; }
-        100% { transform: translateX(820px); opacity: 0; }
+      .pulse {
+        animation: pulse 5.5s ease-in-out infinite;
       }
-      @keyframes spark {
-        0%, 100% { opacity: .22; transform: scale(.75); }
-        50% { opacity: .95; transform: scale(1.18); }
+      @keyframes trace-flow {
+        to { stroke-dashoffset: -124; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: .34; }
+        50% { opacity: .72; }
       }
       @media (prefers-reduced-motion: reduce) {
-        .heading, .tile-core, .signal, .packet, .spark { animation: none; transform: none; opacity: 1; }
+        .trace, .pulse { animation: none; }
       }
     </style>
   </defs>
 
-  <rect x="20" y="18" width="960" height="244" rx="24" fill="url(#board-bg)" stroke="#1D4ED8" stroke-opacity=".26"/>
-  <rect x="20" y="18" width="960" height="244" rx="24" fill="url(#board-grid)"/>
-  <rect x="20" y="18" width="960" height="244" rx="24" fill="url(#scan)"/>
-  <path d="M58 62H942" stroke="url(#board-line)" stroke-width="2" stroke-linecap="round" stroke-opacity=".75" filter="url(#soft-glow)"/>
+  <rect x="30" y="22" width="940" height="216" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
+  <rect x="30" y="22" width="940" height="216" rx="18" fill="url(#grid)"/>
+  <rect x="30" y="22" width="940" height="216" rx="18" fill="url(#scan)"/>
+  <path d="M54 61H946" stroke="#64748B" stroke-opacity=".32"/>
+  <path class="trace" d="M78 213H238L270 194H404L432 213H568L600 194H742L772 213H922" stroke="url(#trace)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
 
-  <g opacity=".9">
-    <path class="divider" d="M218 43V232"/>
-    <path class="divider" d="M410 43V232"/>
-    <path class="divider" d="M604 43V232"/>
-    <path class="divider" d="M862 43V232"/>
-  </g>
+  <text x="58" y="48" class="meta">MARK SUI / TECHNICAL STACK</text>
+  <text x="802" y="48" class="meta">RTL / VLSI / TOOLS / MATH</text>
 
-  <text class="heading" x="42" y="47" fill="#FF5A2F">Languages</text>
-  <text class="heading h-small" x="240" y="47" fill="#35D46A">Hardware/EDA</text>
-  <text class="heading h-small" x="438" y="47" fill="#38BDF8">Data + Math</text>
-  <text class="heading h-small" x="632" y="47" fill="#F032A5">Tools &amp; Frameworks</text>
-  <text class="heading" x="884" y="47" fill="#FB923C">Deploy</text>
-
-  <g id="languages">
-    <g transform="translate(50 80)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="12" stroke="#3776AB"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="17" fill="#60A5FA">Py</text>
-      <text class="icon-label" x="22" y="57">Python</text>
-    </g>
-    <g transform="translate(104 80)" class="delay-2">
-      <circle class="tile-core" cx="22" cy="22" r="21" stroke="#F97316"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="16" fill="#FDBA74">C++</text>
-      <text class="icon-label" x="22" y="57">C/C++</text>
-    </g>
-    <g transform="translate(158 80)" class="delay-3">
-      <path class="tile-core" d="M22 1L42 12V34L22 45L2 34V12L22 1Z" stroke="#22C55E"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="16" fill="#86EFAC">SV</text>
-      <text class="icon-label" x="22" y="57">SystemV</text>
-    </g>
-    <g transform="translate(50 154)" class="delay-4">
-      <path class="tile-core" d="M7 5H37L42 22L37 39H7L2 22L7 5Z" stroke="#06B6D4"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="17" fill="#67E8F9">TS</text>
-      <text class="icon-label" x="22" y="57">TypeScript</text>
-    </g>
-    <g transform="translate(104 154)" class="delay-5">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="22" stroke="#EAB308"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="15" fill="#FDE68A">MAT</text>
-      <text class="icon-label" x="22" y="57">MATLAB</text>
-    </g>
-    <g transform="translate(158 154)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="10" stroke="#FB7185"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="17" fill="#FDA4AF">C#</text>
-      <text class="icon-label" x="22" y="57">Unity</text>
+  <g transform="translate(58 78)">
+    <rect class="panel" x="0" y="0" width="168" height="118" rx="14"/>
+    <text class="label" x="16" y="27" fill="#F97316">Languages</text>
+    <g transform="translate(16 43)">
+      <rect class="chip" x="0" y="0" width="56" height="25" rx="7" stroke="#F97316"/>
+      <text class="chip-text" x="12" y="17">C/C++</text>
+      <rect class="chip" x="64" y="0" width="70" height="25" rx="7" stroke="#60A5FA"/>
+      <text class="chip-text" x="77" y="17">Python</text>
+      <rect class="chip" x="0" y="34" width="48" height="25" rx="7" stroke="#22D3EE"/>
+      <text class="chip-text" x="13" y="51">TS</text>
+      <rect class="chip" x="56" y="34" width="46" height="25" rx="7" stroke="#F43F5E"/>
+      <text class="chip-text" x="71" y="51">C#</text>
+      <rect class="chip" x="110" y="34" width="42" height="25" rx="7" stroke="#EAB308"/>
+      <text class="chip-text" x="121" y="51">SV</text>
     </g>
   </g>
 
-  <g id="hardware">
-    <g transform="translate(244 80)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="11" stroke="#2DD4BF"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#99F6E4">RTL</text>
-      <text class="icon-label" x="22" y="57">logic</text>
-    </g>
-    <g transform="translate(298 80)" class="delay-2">
-      <circle class="tile-core" cx="22" cy="22" r="21" stroke="#4ADE80"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="17" fill="#BBF7D0">VLSI</text>
-      <text class="icon-label" x="22" y="57">chips</text>
-    </g>
-    <g transform="translate(352 80)" class="delay-3">
-      <path class="tile-core" d="M6 10H38V34H6V10ZM14 3V10M22 3V10M30 3V10M14 34V41M22 34V41M30 34V41M0 18H6M0 26H6M38 18H44M38 26H44" stroke="#FBBF24" stroke-linecap="round"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#FEF3C7">EDA</text>
-      <text class="icon-label" x="22" y="57">tools</text>
-    </g>
-    <g transform="translate(244 154)" class="delay-4">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="16" stroke="#A78BFA"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#DDD6FE">STA</text>
-      <text class="icon-label" x="22" y="57">timing</text>
-    </g>
-    <g transform="translate(298 154)" class="delay-5">
-      <path class="tile-core" d="M9 22C9 11 15 5 22 5C29 5 35 11 35 22C35 33 29 39 22 39C15 39 9 33 9 22Z" stroke="#22D3EE"/>
-      <path d="M12 22H32M22 8V36" stroke="#67E8F9" stroke-width="2" stroke-linecap="round"/>
-      <text class="icon-label" x="22" y="57">CMOS</text>
-    </g>
-    <g transform="translate(352 154)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="8" stroke="#60A5FA"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#BFDBFE">FPGA</text>
-      <text class="icon-label" x="22" y="57">proto</text>
+  <g transform="translate(242 78)">
+    <rect class="panel" x="0" y="0" width="178" height="118" rx="14"/>
+    <text class="label" x="16" y="27" fill="#38BDF8">Hardware / EDA</text>
+    <g transform="translate(16 43)">
+      <rect class="chip" x="0" y="0" width="48" height="25" rx="7" stroke="#2DD4BF"/>
+      <text class="chip-text" x="11" y="17">RTL</text>
+      <rect class="chip" x="56" y="0" width="52" height="25" rx="7" stroke="#A78BFA"/>
+      <text class="chip-text" x="68" y="17">VLSI</text>
+      <rect class="chip" x="116" y="0" width="42" height="25" rx="7" stroke="#FBBF24"/>
+      <text class="chip-text" x="127" y="17">STA</text>
+      <rect class="chip" x="0" y="34" width="58" height="25" rx="7" stroke="#22C55E"/>
+      <text class="chip-text" x="11" y="51">CMOS</text>
+      <rect class="chip" x="66" y="34" width="54" height="25" rx="7" stroke="#93C5FD"/>
+      <text class="chip-text" x="77" y="51">FPGA</text>
+      <rect class="chip" x="128" y="34" width="34" height="25" rx="7" stroke="#94A3B8"/>
+      <text class="chip-text" x="138" y="51">DV</text>
     </g>
   </g>
 
-  <g id="data-math">
-    <g transform="translate(438 80)" class="delay-1">
-      <circle class="tile-core" cx="22" cy="22" r="21" stroke="#38BDF8"/>
-      <text class="icon-text" x="22" y="29" text-anchor="middle" font-size="22" fill="#BAE6FD">Σ</text>
-      <text class="icon-label" x="22" y="57">linear</text>
-    </g>
-    <g transform="translate(492 80)" class="delay-2">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="12" stroke="#FACC15"/>
-      <text class="icon-text" x="22" y="29" text-anchor="middle" font-size="22" fill="#FEF08A">∫</text>
-      <text class="icon-label" x="22" y="57">calc</text>
-    </g>
-    <g transform="translate(546 80)" class="delay-3">
-      <path class="tile-core" d="M22 2L42 22L22 42L2 22L22 2Z" stroke="#FB7185"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="17" fill="#FDA4AF">ML</text>
-      <text class="icon-label" x="22" y="57">models</text>
-    </g>
-    <g transform="translate(438 154)" class="delay-4">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="9" stroke="#F97316"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#FDBA74">CUDA</text>
-      <text class="icon-label" x="22" y="57">GPU</text>
-    </g>
-    <g transform="translate(492 154)" class="delay-5">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="20" stroke="#A3E635"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="15" fill="#D9F99D">JNB</text>
-      <text class="icon-label" x="22" y="57">Jupyter</text>
-    </g>
-    <g transform="translate(546 154)" class="delay-1">
-      <path class="tile-core" d="M4 32C12 8 29 5 40 17C31 41 14 43 4 32Z" stroke="#60A5FA"/>
-      <text class="icon-text" x="22" y="29" text-anchor="middle" font-size="18" fill="#BFDBFE">CL</text>
-      <text class="icon-label" x="22" y="57">climate</text>
+  <g transform="translate(436 78)">
+    <rect class="panel" x="0" y="0" width="172" height="118" rx="14"/>
+    <text class="label" x="16" y="27" fill="#A7F3D0">Data + Math</text>
+    <g transform="translate(16 43)">
+      <rect class="chip" x="0" y="0" width="58" height="25" rx="7" stroke="#38BDF8"/>
+      <text class="chip-text" x="11" y="17">linear</text>
+      <rect class="chip" x="66" y="0" width="48" height="25" rx="7" stroke="#FACC15"/>
+      <text class="chip-text" x="77" y="17">calc</text>
+      <rect class="chip" x="122" y="0" width="34" height="25" rx="7" stroke="#FB7185"/>
+      <text class="chip-text" x="132" y="17">ML</text>
+      <rect class="chip" x="0" y="34" width="58" height="25" rx="7" stroke="#F97316"/>
+      <text class="chip-text" x="10" y="51">CUDA</text>
+      <rect class="chip" x="66" y="34" width="76" height="25" rx="7" stroke="#84CC16"/>
+      <text class="chip-text" x="77" y="51">Jupyter</text>
     </g>
   </g>
 
-  <g id="tools">
-    <g transform="translate(630 80)" class="delay-1">
-      <circle class="tile-core" cx="22" cy="22" r="21" stroke="#61DAFB"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#A5F3FC">React</text>
-      <text class="icon-label" x="22" y="57">UI</text>
-    </g>
-    <g transform="translate(684 80)" class="delay-2">
-      <path class="tile-core" d="M22 2L42 38H2L22 2Z" stroke="#A78BFA"/>
-      <text class="icon-text" x="22" y="29" text-anchor="middle" font-size="14" fill="#DDD6FE">Vite</text>
-      <text class="icon-label" x="22" y="57">build</text>
-    </g>
-    <g transform="translate(738 80)" class="delay-3">
-      <path class="tile-core" d="M8 8H36V36H8V8Z" stroke="#F97316"/>
-      <path d="M15 14L29 30M18 17L27 17M17 18V27" stroke="#FDBA74" stroke-width="3" stroke-linecap="round"/>
-      <text class="icon-label" x="22" y="57">Git</text>
-    </g>
-    <g transform="translate(792 80)" class="delay-4">
-      <path class="tile-core" d="M22 3L34 13V31L22 41L10 31V13L22 3Z" stroke="#FACC15"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#FEF08A">Unity</text>
-      <text class="icon-label" x="22" y="57">XR</text>
-    </g>
-    <g transform="translate(630 154)" class="delay-5">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="10" stroke="#22C55E"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#BBF7D0">ESP</text>
-      <text class="icon-label" x="22" y="57">embedded</text>
-    </g>
-    <g transform="translate(684 154)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="14" stroke="#94A3B8"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#E2E8F0">Mac</text>
-      <text class="icon-label" x="22" y="57">Swift</text>
-    </g>
-    <g transform="translate(738 154)" class="delay-2">
-      <path class="tile-core" d="M8 9H36L40 20L22 39L4 20L8 9Z" stroke="#F472B6"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#FBCFE8">CLI</text>
-      <text class="icon-label" x="22" y="57">tools</text>
-    </g>
-    <g transform="translate(792 154)" class="delay-3">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="22" stroke="#38BDF8"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#BAE6FD">API</text>
-      <text class="icon-label" x="22" y="57">apps</text>
+  <g transform="translate(624 78)">
+    <rect class="panel" x="0" y="0" width="188" height="118" rx="14"/>
+    <text class="label" x="16" y="27" fill="#CBD5E1">Tools</text>
+    <g transform="translate(16 43)">
+      <rect class="chip" x="0" y="0" width="58" height="25" rx="7" stroke="#61DAFB"/>
+      <text class="chip-text" x="10" y="17">React</text>
+      <rect class="chip" x="66" y="0" width="48" height="25" rx="7" stroke="#A78BFA"/>
+      <text class="chip-text" x="77" y="17">Vite</text>
+      <rect class="chip" x="122" y="0" width="42" height="25" rx="7" stroke="#F97316"/>
+      <text class="chip-text" x="133" y="17">Git</text>
+      <rect class="chip" x="0" y="34" width="54" height="25" rx="7" stroke="#FBBF24"/>
+      <text class="chip-text" x="10" y="51">Unity</text>
+      <rect class="chip" x="62" y="34" width="52" height="25" rx="7" stroke="#34D399"/>
+      <text class="chip-text" x="73" y="51">ESP32</text>
+      <rect class="chip" x="122" y="34" width="48" height="25" rx="7" stroke="#94A3B8"/>
+      <text class="chip-text" x="133" y="51">macOS</text>
     </g>
   </g>
 
-  <g id="deploy">
-    <g transform="translate(886 80)" class="delay-1">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="12" stroke="#F59E0B"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="12" fill="#FDE68A">Pages</text>
-      <text class="icon-label" x="22" y="57">GitHub</text>
-    </g>
-    <g transform="translate(940 80)" class="delay-2">
-      <circle class="tile-core" cx="22" cy="22" r="21" stroke="#38BDF8"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="13" fill="#BAE6FD">Web</text>
-      <text class="icon-label" x="22" y="57">static</text>
-    </g>
-    <g transform="translate(886 154)" class="delay-3">
-      <path class="tile-core" d="M8 3H30L40 13V41H8V3Z" stroke="#FB7185"/>
-      <path d="M30 3V13H40" stroke="#FDA4AF" stroke-width="2"/>
-      <text class="icon-text" x="22" y="30" text-anchor="middle" font-size="13" fill="#FDA4AF">PDF</text>
-      <text class="icon-label" x="22" y="57">reports</text>
-    </g>
-    <g transform="translate(940 154)" class="delay-4">
-      <rect class="tile-core" x="0" y="0" width="44" height="44" rx="13" stroke="#34D399"/>
-      <text class="icon-text" x="22" y="28" text-anchor="middle" font-size="14" fill="#A7F3D0">OSS</text>
-      <text class="icon-label" x="22" y="57">repos</text>
+  <g transform="translate(828 78)">
+    <rect class="panel" x="0" y="0" width="114" height="118" rx="14"/>
+    <text class="label" x="16" y="27" fill="#F59E0B">Delivery</text>
+    <g transform="translate(16 43)">
+      <rect class="chip" x="0" y="0" width="76" height="25" rx="7" stroke="#F59E0B"/>
+      <text class="chip-text" x="10" y="17">Pages</text>
+      <rect class="chip" x="0" y="34" width="76" height="25" rx="7" stroke="#38BDF8"/>
+      <text class="chip-text" x="10" y="51">static</text>
     </g>
   </g>
 
-  <g transform="translate(78 240)" filter="url(#soft-glow)">
-    <path class="signal" d="M0 0H160L188 -16H320L344 0H518L548 -18H688L718 0H846" stroke="url(#signal)" stroke-width="4" stroke-linecap="round"/>
-    <circle class="packet" cx="0" cy="0" r="5" fill="#E0F2FE"/>
-    <circle class="packet two" cx="0" cy="0" r="4" fill="#FEF3C7"/>
-    <circle class="packet three" cx="0" cy="0" r="4" fill="#A7F3D0"/>
+  <g class="pulse" opacity=".55">
+    <circle cx="78" cy="213" r="3" fill="#E5E7EB"/>
+    <circle cx="270" cy="194" r="3" fill="#E5E7EB"/>
+    <circle cx="600" cy="194" r="3" fill="#E5E7EB"/>
+    <circle cx="922" cy="213" r="3" fill="#E5E7EB"/>
   </g>
 
-  <g filter="url(#soft-glow)">
-    <circle class="spark" cx="226" cy="73" r="3" fill="#E0F2FE"/>
-    <circle class="spark two" cx="602" cy="73" r="3" fill="#FDE68A"/>
-    <circle class="spark three" cx="868" cy="73" r="3" fill="#FBCFE8"/>
+  <g font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="11" font-weight="700" fill="#94A3B8">
+    <text x="86" y="229">F = A*B + A&apos;*C</text>
+    <text x="414" y="229">sum w_i*x_i</text>
+    <text x="722" y="229">slack = T_req - T_arr</text>
   </g>
 </svg>
